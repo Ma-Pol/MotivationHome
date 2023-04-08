@@ -1,6 +1,7 @@
 $(document).ready(() => {
   renderCurrentTime();
   renderQuote();
+  renderRandomImage();
 });
 
 const renderCurrentTime = () => {
@@ -23,4 +24,10 @@ const renderQuote = () => {
       $("#content").text(content);
       $("#author").text(author);
     });
+};
+
+const renderRandomImage = () => {
+  const randomImageNumber = Math.floor(Math.random() * 5) + 1;
+  const randomImageURL = `./imgs/img${randomImageNumber}.jpg`;
+  $(document.body).css("background-image", `url(${randomImageURL})`);
 };
