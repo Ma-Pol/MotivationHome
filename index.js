@@ -29,5 +29,6 @@ const renderQuote = () => {
 const renderRandomImage = () => {
   const randomImageNumber = Math.floor(Math.random() * 5) + 1;
   const randomImageURL = `./imgs/img${randomImageNumber}.jpg`;
+  console.log(randomImageURL);
   $(document.body).css("background-image", `url(${randomImageURL})`);
 };
